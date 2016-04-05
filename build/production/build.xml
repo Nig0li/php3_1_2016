@@ -3,7 +3,10 @@
 <project name="php3" default="build" basedir=".">
 
     <target name="vars">
-        <resolvepath propertyName="target.dir" path="C:\OpenServer\domains\git"/>
+        <php function="date" returnProperty="data.time">
+            <param value="Y-m-d-H-i-s"/>
+        </php>
+        <resolvepath propertyName="target.dir" path="C:\OpenServer\domains\git\${data.time}"/>
         <property name="domain" value="test.com"/>
     </target>
 
