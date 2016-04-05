@@ -32,7 +32,11 @@
         <exec dir="${target.dir}" command="php C:\OpenServer\bin\composer.phar install"
               checkreturn="true" passthru="true" error="stdout"/>
     </target>
+    
+    <target name="symlink">
+        <symlink target="${target.dir}" link="C:\OpenServer\domains\git\current" overwrite="true"/>
+    </target>
 
-    <target name="build" depends="vars, copy, config, composer"></target>
+    <target name="build" depends="vars, copy, config, composer, symlink"></target>
 
 </project>
