@@ -6,7 +6,7 @@
         <php function="date" returnProperty="data.time">
             <param value="Y-m-d-H-i-s"/>
         </php>
-        <resolvepath propertyName="target.dir" path="C:\OpenServer\domains\git\${data.time}"/>
+        <resolvepath propertyName="target.dir" path="/home/serv/domains/git/${target.dir}"/>
         <property name="domain" value="test.com"/>
     </target>
 
